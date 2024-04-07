@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "3.3.0"
+ruby "3.2.3"
 gem 'httparty'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -60,4 +60,3 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
