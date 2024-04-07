@@ -8,6 +8,13 @@ module Api
       render json: serialize_features(features), status: :ok
     end
 
+    def show
+      feature = Feature.find(params[:id])
+      render json: feature, status: :ok
+    rescue ActiveRecord::RecordNotFound
+      render json: { error: 'Feature not found' }, status: :not_found
+    end
+
     private
 
     #siguiendo el formato.

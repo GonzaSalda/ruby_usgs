@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # API routes
   namespace :api do
-      resources :features, only: [:index] do
+      resources :features, only: [:index,:show] do
         resources :comments, only: [:create, :index]
     end
   end
