@@ -1,24 +1,19 @@
-# README
+# Ruby USGS
+Esta aplicacion permite:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Visualizar una lista de terremotos recientes con información como magnitud, lugar, fecha y hora.
 
-Things you may want to cover:
+Filtrar la lista de terremotos por tipo de magnitud.
 
-* Ruby version
+Ver detalles de un terremoto específico al hacer clic en un elemento de la lista.
 
-* System dependencies
+Agregar comentarios a un terremoto específico.
 
-* Configuration
 
-* Database creation
+*Backend: Ruby on Rails
 
-* Database initialization
+*Frontend: ReactJS
 
-* How to run the test suite
+*Base de datos: PostgreSQL
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*API externa: USGS Earthquake Hazards Program.
