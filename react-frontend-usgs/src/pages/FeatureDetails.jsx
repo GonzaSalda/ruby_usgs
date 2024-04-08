@@ -27,27 +27,30 @@ const Feature = () => {
     GetFeatureComments();
   }, [id]);
 
- 
-
   return (
     <>
-      <div>
-        {feature && (
-          <>
-            <h2>{feature.title}</h2>
-            <p>Lugar: {feature.place}</p>
-          </>
-        )}
+      <div className="overflow-hidden h-[450px] my-9  w-full items-center flex justify-center">
+        <div className="max-w-[350px] w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-white text-sm flex flex-col gap-y-6">
+          {feature && (
+            <>
+              <h2 className="text-center font-bold text-lg">{feature.place}</h2>
+              <p>Magnitud: <span className="text-gray-400">{feature.magnitude}{feature.mag_type}</span></p>
+              <p>Longitud: <span className="text-gray-400">{feature.longitude}</span></p>
+              <p>Latitud: <span className="text-gray-400">{feature.latitude}</span></p>
+            </>
+          )}
 
-        <CommentForm  id={id} />
+          <CommentForm id={id} />
 
-        <ul>
-          {comments?.map((comment) => (
-            <li key={comment.id}>
-              <p>{comment.body}</p>
-            </li>
-          ))}
-        </ul>
+          <ul>
+            <h1 className="font-semibold lg:text-xl md:text-sm">Lista de comentarios</h1>
+            {comments?.map((comment) => (
+              <li className="list-decimal" key={comment.id}>
+                <p>{comment.body}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );

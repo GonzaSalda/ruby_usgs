@@ -8,8 +8,8 @@ const CommentForm = ({id}) => {
 
   return (
     <>
-    <form onSubmit={(e)=> handleSubmit(e,id)}>
-          <textarea
+    <form className='flex items-center gap-y-2 justify-center flex-col' onSubmit={(e)=> handleSubmit(e,id)}>
+          <textarea className='w-full'
             value={body}
             onChange={(e) => setBody(e.target.value)}
             placeholder="Escribe un comentario..."
