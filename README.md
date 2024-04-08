@@ -18,8 +18,26 @@ Agregar comentarios a un terremoto específico.
 
 *API externa: USGS Earthquake Hazards Program.
 
+# Iniciar proyecto con Ruby on rails para el backend
 
-Pruebas de endpoints
+*Crear la base de datos: ruby_usgs
+
+*Migrar la bd con: rails db:migrate
+
+*Realizar el fetch con:  rails fetch_features_data:fetch
+
+*Iniciar el servidor con: rails server
+
+# Iniciar proyecto con React para el frontend
+
+*con el comando 'cd' entrar a la carptea react-frontend-usgs
+
+*Instalar las dependencias con npm i
+
+*Iniciar el servidor con npm start
+
+
+# Pruebas de endpoints
 
 curl -X GET \
 http://127.0.0.1:3000/api/features?page=1&per_page=2%27
