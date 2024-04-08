@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Feature from "../pages/FeatureDetails";
 import CommentForm from "../components/CommentForm";
 import Home from "../pages/Home";
