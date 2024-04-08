@@ -7,23 +7,59 @@ const FeatureList = () => {
 
   return (
     <>
-      <ul>
-        {features.map((feature) => (
-          <li key={feature.id}>
-            <Link to={`/feature/${feature.id}`}>
-              <h3>{feature.title}</h3>
-              <p>{feature.place}</p>
-            </Link>
-          </li>
-        ))}
+      <div className="flex flex-col mt-6 items-center gap-y-4">
+        <div className="flex flex-wrap gap-6 justify-center items-center ">
+          {features.map((feature) => (
+            <div
+              key={feature.id}
+              className="max-w-[350px] w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 text-white text-sm flex flex-col gap-y-6  "
+            >
+              <h2 className="text-xl font-bold">{feature.place}</h2>
+              <h2 className="uppercase">
+                <span className="font-bold">Magnitud</span>: {feature.magnitude}
+                {feature.mag_type}
+              </h2>
+              <Link to={`/feature/${feature.id}`}>
+                <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  Read more
+                  <svg
+                    class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </button>
+              </Link>
+            </div>
+          ))}
+        </div>
 
-        <button onClick={handlePrevPage} disabled={currentPage === 1}>
-          Previous
-        </button>
-        <button onClick={handleNextPage} disabled={currentPage === totalPages}>
-          Next
-        </button>
-      </ul>
+        <div className="flex gap-x-5 mb-2">
+          <button
+            className="rounded-full border-black text-sm w-20 h-10 bg-blue-700  hover:bg-blue-800 text-white "
+            onClick={handlePrevPage}
+            disabled={currentPage === 1}
+          >
+            Previous
+          </button>
+          <button
+            className="rounded-full border-black text-sm w-20 h-10 bg-blue-700  hover:bg-blue-800 text-white "
+            onClick={handleNextPage}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </button>
+        </div>
+      </div>
     </>
   );
 };

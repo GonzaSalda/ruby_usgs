@@ -1,4 +1,5 @@
 import React from 'react';
+import 'tailwindcss/tailwind.css';
 import ReactDOM from 'react-dom/client';
 import FeaturesProvider from './context/FeaturesContex';
 import AppRouter from './router/AppRouter';
