@@ -6,7 +6,7 @@ import { FaHome } from "react-icons/fa";
 const Navbar = () => {
   return (
     <>
-      <div className="bg-black/65 p-6 text-black font-semibold flex justify-between  items-center">
+      <div className="bg-gray-700 p-6 text-black font-semibold flex justify-between  items-center">
         <Link to={"/"}>
         <button className="p-2 rounded-md border-white flex items-center justify-center">
   <FaHome className="w-6 h-6 text-blue-500 hover:text-white hover:scale-125" />
