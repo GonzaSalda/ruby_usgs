@@ -3,7 +3,7 @@ module Api
     def index
       features = Feature.all
       features = features.where(mag_type: params[:filters][:mag_type]) if params[:filters].present? && params[:filters][:mag_type].present?
-      features = features.page(params[:page]).per(params[:per_page] || 20)
+      features = features.page(params[:page]).per(params[:per_page] || 1000)
 
       render json: serialize_features(features), status: :ok
     end

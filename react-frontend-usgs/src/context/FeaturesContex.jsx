@@ -10,7 +10,7 @@ const FeaturesProvider = ({ children }) => {
 
   const GetAllFeatures = async (page) => {
     const baseURL = "http://127.0.0.1:3000/api/features";
-    const res = await fetch(`${baseURL}?page=${page}&per_page=10`);
+    const res = await fetch(`${baseURL}?page=${page}&per_page=1000`);
     const data = await res.json();
     setFeatures(data.data);
     setTotalPages(data.pagination.total);
